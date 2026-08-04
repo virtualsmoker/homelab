@@ -9,7 +9,6 @@ El objetivo de este repositorio es desarrollar un entorno de laboratorio que per
 # Objetivos
 
 - Aprender Administración de Sistemas mediante proyectos reales.
-- Documentar cada proyecto utilizando Markdown.
 - Aplicar buenas prácticas de documentación y control de versiones con Git.
 - Construir un portfolio técnico para demostrar conocimientos y evolución.
 
