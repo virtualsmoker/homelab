@@ -6,9 +6,9 @@
 
 ## Descripción
 
-Este proyecto documenta la instalación de Ubuntu Server 26.04 LTS sobre Oracle VirtualBox como primer servidor del laboratorio.
+Este proyecto documenta la instalación de Ubuntu Server 26.04 LTS sobre Oracle VirtualBox como punto de partida del homelab.
 
-Este servidor será la base sobre la que se desarrollarán los siguientes proyectos del laboratorio.
+El servidor creado constituye la base sobre la que se desarrollarán los siguientes proyectos del laboratorio.
 
 ---
 
@@ -45,17 +45,26 @@ Este servidor será la base sobre la que se desarrollarán los siguientes proyec
 
 ## Arquitectura
 
-El laboratorio está formado por una única máquina virtual Ubuntu Server ejecutándose sobre Oracle VirtualBox.
+La siguiente figura muestra la arquitectura del laboratorio al finalizar el Proyecto 01.
 
-![Arquitectura](images/architecture.png)
+```mermaid
+graph TD
+
+    Host["Windows 11<br/>(Host físico)"]
+
+    VBox["Oracle VirtualBox"]
+
+    Ubuntu["SRV-UBU01<br/>Ubuntu Server 26.04 LTS"]
+
+    Host --> VBox
+    VBox --> Ubuntu
+```
 
 ---
 
 ## Implementación
 
-La instalación se realizó utilizando la imagen oficial de Ubuntu Server 26.04 LTS sobre Oracle VirtualBox.
-
-Durante el proceso se configuró el almacenamiento mediante LVM, se habilitó OpenSSH para la administración remota y se mantuvo una configuración de red NAT mediante DHCP.
+Durante la instalación se configuró el almacenamiento mediante LVM, se instaló OpenSSH para permitir la administración remota y se configuró la máquina virtual con una red NAT utilizando DHCP.
 
 Para una explicación detallada del proceso de instalación, consulta la guía:
 
@@ -67,11 +76,9 @@ Para una explicación detallada del proceso de instalación, consulta la guía:
 
 La instalación finalizó correctamente y el servidor quedó preparado para comenzar las tareas de administración y configuración en los siguientes proyectos.
 
-Características finales:
+Al finalizar el proyecto se obtuvo un servidor con las siguientes características:
 
 - Ubuntu Server 26.04 LTS instalado.
 - OpenSSH habilitado.
 - Almacenamiento configurado mediante LVM.
 - Red NAT mediante DHCP.
-
-![Servidor instalado](images/installation-complete.png)
